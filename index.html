@@ -3,7 +3,7 @@
 <head>
 
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-77775363868454743"
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7777536386845474"
      crossorigin="anonymous"></script>
 
 
@@ -14,8 +14,8 @@
 <meta name="robots" content="index, follow">
 <meta name="googlebot" content="index, follow">
 
-<title>KU SSEGU -  Michael - VJ Neil </title>
-<meta name="description" content="2026 free Luganda translated movies by Vj Junior by VJ Junior | VJ Jingo | VJ Kevo - Ice P Ulio">
+<title> Enos: The First Chimp to Orbit Earth</title>
+<meta name="description" content="What Happened to the Space Chimps? The Untold Story of Ham, Enos & Chimpanzees Today">
 
 <!-- ===================== BASE STYLES ===================== -->
 <style>
@@ -30,47 +30,59 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-/* MENU */
-.menu-bar {
-  position: sticky;
-  buttom: 0;
-  width: 70%;
-  max-width: 1000px;
-  margin: 0 auto 20px;
-  background: #fff;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px 0;
-  border-radius: 0 0 12px 12px;
-  z-index: 9999;
-  transition: background 0.3s, color 0.3s;
+
+/* ===== FORCE DESKTOP LOOK ONLY ON PHONES + TABLETS ===== */
+@media only screen and (max-width: 1024px) {
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  body {
+    zoom: 0.38; /* safer than transform */
+    transform-origin: top left;
+  }
+
+  #outer-wrapper,
+  .main-wrapper,
+  .content-wrapper {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  a, button {
+    touch-action: manipulation;
+  }
 }
 
-.menu-bar a {
-  font-family: Georgia, serif;
-  font-weight: 700;
-  padding: 8px 14px;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 18px;
-  border-radius: 6px;
-  transition: background 0.3s, color 0.3s;
+/* STRONGEST RESET TO BLOGGER DEFAULT (PHONES ONLY) */
+@media only screen and (max-width: 768px) {
+
+  .post-body,
+  .page-body,
+  .post-body *,
+  .page-body * {
+    all: revert !important;
+  }
+
 }
 
-.menu-home { background: #04ff00; color: #ff00fe; }
-.menu-movies { background: #3d85c6; color: #ffa400; }
-.menu-blogs { background: #fcff01; color: #351c75; }
-.menu-about { background: #01ffff; color: #cc0000; }
-.menu-contact { background: #4c1130; color: #fcff01; }
-.menu-jobs { background: #ff00fe; color: #04ff00; }
+/* ======================= DESKTOP ONLY (1025px and above) ======================= */
+@media only screen and (min-width: 1025px) {
 
-@media(max-width:600px){
-  .menu-bar { width: 95% }
-  .menu-bar a { font-size: 15px; padding: 6px 10px }
+/* --- Paragraphs styling --- */
+.post-body p {
+  font-size: 20px !important;
+  line-height: 1.75em !important;
+  color: #222 !important;
+  font-family: "Arial", "Helvetica", sans-serif !important;
+  max-width: 500px;
+  margin: 0 auto 1em auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+  overflow: visible;
 }
-
+  
 /* BLOG POST CONTENT */
 .content {
   max-width: 900px;
@@ -304,78 +316,370 @@ body.light-mode .movie-title { background: #007700; color: #fff; }
 </head>
 <body>
 
-
-<!-- ===================== BLOG POST ===================== -->
-<div style="background-color: #f8f9fa; border-radius: 10px; font-family: Arial, sans-serif; margin: 10px auto; max-width: 600px; padding: 15px;">
-  
-  <h2 style="color: #343a40; font-size: 22px; margin-bottom: 8px; text-align: center;">
-    Biker  Part A Kali Mu: VJ Shield 🎬
-  </h2>
+<!-- News Headline Slider -->
+<div class="news-ticker">
+  <div class="news-track" id="mo9e-n9s-p9ts"></div>
 </div>
 
-
-<div class="video-container">
-  <video 
-    id="myVideo"
-    playsinline
-    autoplay
-    muted
-    controls
-    preload="metadata"
-    style="width:100%; height:100%; object-fit:cover;"
-  >
-    <source src="https://dl.movviez.com/movies/MICHAEL%202026%20VJ%20NEIL%201080p%20(NO'S)_x26417779729195298.mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
-
+<!-- Styles -->
 <style>
-.video-container{
-  width:100%;
-  height:550px;
-  background:#000;
-  overflow:hidden;
-  position:relative;
-  border-radius:10px;
+.news-ticker {
+  width: 100%;
+  background: #111;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.7);
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+.news-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 60s linear infinite; /* slower scroll (was 30s) */
+}
+.news-item {
+  display: inline-block;
+  margin: 0 100px;
+  font-size: 32px;
+  font-weight: 800;
+  color: #fff;
+  text-transform: capitalize;
+}
+.news-item a {
+  color: #e50914;
+  text-decoration: none;
+}
+.news-item a:hover {
+  text-decoration: underline;
 }
 
-/* Force video fit */
-.video-container video{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-/* Hide fullscreen button (extra safety) */
-video::-webkit-media-controls-fullscreen-button {
-  display: none !important;
-}
-
-/* Disable right-click */
-.video-container video{
-  pointer-events:auto;
+.news-ticker:hover .news-track {
+  animation-play-state: paused;
 }
 </style>
 
-<script>
-const vid = document.getElementById("myVideo");
+<!-- Script to merge two JSON feeds -->
+<script type="text/javascript">
+var combinedPosts = [];
 
-// Force autoplay fallback
-vid.play().catch(()=>{});
+function renderFirstFeed(json) {
+  addPostsToArray(json);
+  checkAndRenderTicker();
+}
 
-// Disable right-click menu
-vid.addEventListener("contextmenu", e => e.preventDefault());
+function renderSecondFeed(json) {
+  addPostsToArray(json);
+  checkAndRenderTicker();
+}
 
-// Prevent fullscreen via JS (extra lock)
-vid.addEventListener("fullscreenchange", () => {
-  if (document.fullscreenElement) {
-    document.exitFullscreen();
+function addPostsToArray(json) {
+  for (var i = 0; i < json.feed.entry.length; i++) {
+    var entry = json.feed.entry[i];
+    var title = entry.title.$t;
+    var url = '';
+    for (var j = 0; j < entry.link.length; j++) {
+      if (entry.link[j].rel === 'alternate') {
+        url = entry.link[j].href;
+        break;
+      }
+    }
+    combinedPosts.push({title: title, url: url});
   }
-});
+}
+
+function checkAndRenderTicker() {
+  if (combinedPosts.length > 0) {
+    var postsHTML = '';
+    combinedPosts.forEach(function(post){
+      postsHTML += `<div class="news-item"><a href="${post.url}" target="_blank">${post.title}</a></div>`;
+    });
+    document.getElementById('mo9e-n9s-p9ts').innerHTML = postsHTML + postsHTML;
+  }
+}
 </script>
+
+<!-- Two Blogger JSON Feeds -->
+<script src="https://www.ssegu.com/feeds/posts/default/-/moneypower?alt=json-in-script&callback=renderFirstFeed"></script>
+<script src="https://www.ssegu.com/feeds/posts/default/-/othercategory?alt=json-in-script&callback=renderSecondFeed"></script>
+
+<!doctype html>
+<html amp lang="en">
+<head>
+<meta charset="utf-8">
+<title>ssegu</title>
+
+<link rel="canonical" href="https://www.ssegu.com/">
+
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+
+<!-- 🔁 AUTO REFRESH EVERY 2 MINUTES -->
+<meta http-equiv="refresh" content="120">
+
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+
+<!-- AMP AdSense -->
+<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+
+<!-- AMP Boilerplate -->
+<style amp-boilerplate>
+body{visibility:hidden}
+</style>
+<noscript>
+<style amp-boilerplate>
+body{visibility:visible}
+</style>
+</noscript>
+
+<style amp-custom>
+
+body{
+margin:0;
+background:#f4f6f8;
+color:#111;
+font-family:Georgia,serif;
+line-height:1.9;
+}
+
+.post-container{
+max-width:800px;
+margin:40px auto;
+padding:25px;
+background:#fff;
+border-radius:12px;
+}
+
+h1{
+text-align:center;
+font-size:34px;
+margin-bottom:30px;
+}
+
+h2{
+margin-top:45px;
+font-size:26px;
+}
+
+h3{
+margin-top:25px;
+font-size:21px;
+}
+
+p{
+font-size:18px;
+margin-bottom:16px;
+}
+
+ul{
+margin-left:20px;
+}
+
+.tip-box{
+background:#e8f7ff;
+border-left:5px solid #2196f3;
+padding:15px;
+margin:20px 0;
+border-radius:6px;
+}
+
+.highlight-box{
+background:#fff8e1;
+border-left:5px solid #ff9800;
+padding:15px;
+margin:20px 0;
+border-radius:6px;
+}
+
+.footer{
+background:#111;
+padding:20px;
+text-align:center;
+}
+
+.footer a{
+color:#04ff00;
+text-decoration:none;
+margin:0 6px;
+}
+
+.footer p{
+color:#aaa;
+font-size:14px;
+}
+
+</style>
+
+</head>
+
+     <body>
 
 
 </div>
+
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7777536386845474"
+     data-ad-slot="2515077612"
+     data-auto-format="mcrspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad>
+
+</div>
+
+
+          <b:if cond='data:blog.pageType == "index"'>
+
+
+</b:if>
+ 
+</body>
+</html>
+
+
+<!-- ===================== BLOG POST ===================== -->
+ <style>
+/* ===== PROFESSIONAL ARTICLE STYLE (SCOPED) ===== */
+
+.food-box {
+  background-color: #e50914;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  margin: 10px auto;
+  max-width: 1500px;
+  padding: 25px;
+  color: #fff;
+}
+
+/* Paragraphs */
+.food-box p {
+  font-size: 55px;
+  line-height: 1.8em;
+  margin: 18px 0;
+}
+
+/* Main title */
+.food-box h1 {
+  font-size: 95px;
+  line-height: 1.2em;
+  margin: 10px 0 20px;
+  font-weight: 700;
+}
+
+/* Section headings */
+.food-box h2 {
+  font-size: 90px;
+  line-height: 1.4em;
+  margin: 30px 0 15px;
+  font-weight: 700;
+}
+
+/* Sub headings */
+.food-box h3 {
+  font-size: 85px;
+  line-height: 1.3em;
+  margin: 25px 0 12px;
+  font-weight: 700;
+}
+
+/* Lists */
+.food-box ul,
+.food-box ol {
+  margin: 15px 0 25px;
+  padding-left: 40px;
+}
+
+.food-box li {
+  font-size: 34px;
+  line-height: 1.6em;
+  margin: 8px 0;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .food-box p { font-size: 55px; }
+  .food-box h1 { font-size: 90px; }
+  .food-box h2 { font-size: 80px; }
+  .food-box h3 { font-size: 75px; }
+  .food-box li { font-size: 45px; }
+}
+</style>
+
+<div class="food-box">
+ 
+
+<h3>Enos: The First Chimp to Orbit Earth</h3>
+
+<p>Later that same year, on November 29, 1961, Enos took things even further. He became the first chimpanzee to orbit the Earth—twice.</p>
+
+<ul>
+  <li>Completed two full orbits around Earth</li>
+  <li>Provided critical data for future human missions</li>
+  <li>Helped confirm that extended space travel was possible</li>
+</ul>
+
+<p>Sadly, Enos died less than a year later due to illness. Despite his short life after the mission, his contribution to space exploration was enormous.</p>
+
+<h2>Why Were Chimps Sent to Space?</h2>
+
+<p>Before risking human lives, scientists needed answers to critical questions:</p>
+
+<ul>
+  <li>Can a living being survive launch and zero gravity?</li>
+  <li>Will they be able to perform tasks in space?</li>
+  <li>How does the body react under extreme conditions?</li>
+</ul>
+
+<p>Chimpanzees were chosen because of their biological and behavioral similarities to humans. The success of Ham and Enos directly influenced the first human space missions.</p>
+
+<h2>What Is the Chimpanzee Population Today?</h2>
+
+<p>While Ham and Enos helped humanity reach the stars, chimpanzees on Earth are facing serious challenges.</p>
+
+<p>Today, the global population of wild chimpanzees is estimated to be between <strong>170,000 and 300,000</strong>. That number has been steadily declining over the years.</p>
+
+<h3>Main Threats to Chimpanzees</h3>
+
+<ul>
+  <li><strong>Habitat Loss:</strong> Deforestation is destroying their natural homes</li>
+  <li><strong>Poaching:</strong> Illegal hunting for bushmeat and trade</li>
+  <li><strong>Disease:</strong> Illnesses spreading due to human interaction</li>
+</ul>
+
+<p>Chimpanzees are now classified as <strong>endangered</strong>, which means they are at high risk of extinction if current trends continue.</p>
+
+<h2>From Space Exploration to Conservation</h2>
+
+<p>It’s incredible to think that chimpanzees once played a key role in one of humanity’s greatest achievements—space exploration. Yet today, their survival is uncertain.</p>
+
+<p>The story of Ham and Enos is not just about science; it’s also a reminder of our responsibility toward wildlife. As we continue to explore new frontiers like Mars, we must not forget the species that helped us get there.</p>
+
+<h2>How You Can Help Protect Chimpanzees</h2>
+
+<p>Protecting chimpanzees doesn’t require going to space. Small actions can make a big difference:</p>
+
+<ul>
+  <li>Support wildlife conservation organizations</li>
+  <li>Promote awareness about endangered species</li>
+  <li>Choose sustainable products that reduce deforestation</li>
+</ul>
+
+<h2>Final Thoughts: Honoring the Legacy of the Astrochimps</h2>
+
+<p>Ham and Enos were true pioneers. Their bravery and contribution helped unlock the mysteries of space and made human missions possible.</p>
+
+<p>Today, as we look up at the stars, we should also look around and protect what we have here on Earth. Chimpanzees are not just part of our past—they are part of our future.</p>
+
+<p>By supporting conservation efforts, we honor the legacy of these remarkable animals and ensure their story continues for generations to come. 🌍✨</p>
+
+</div>
+
 
 
 </section>
@@ -394,7 +698,7 @@ vid.addEventListener("fullscreenchange", () => {
 
 <!-- ===================== MOVIE GRID ===================== -->
 <div class="movie-grid-wrapper">
-  <h2 class="grid-title">📺 Firimu wano ku ssegu| ne / Software & Tech
+  <h2 class="grid-title">📺Bu Firimu | ⚖️ Legal Services | 💰 Finance & Banking | 🏥 Health & Medical | 🏠 Real Estate | 📱 SaaS / Software & Tech
 </h2>
   
 
@@ -621,6 +925,7 @@ document.body.appendChild(s2);
 </script>
 
 
+
 <div id="siteFooter" style='background:#111; text-align:center; padding:10px 0; font-family:Raleway, Arial, sans-serif;'>
 
     <a href='/' rel='noopener noreferrer' style='color:#04ff00; margin:0 6px; text-decoration:none;'>Home</a>
@@ -652,6 +957,7 @@ document.body.appendChild(s2);
   }
 })();
 </script>
+
 
 
 <!-- ===================== JAVASCRIPT ===================== -->
